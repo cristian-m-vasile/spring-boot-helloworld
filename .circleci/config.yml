@@ -2,9 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
-version: 2.1
-orbs:
-  coveralls: coveralls/coveralls@1.0.6
+version: 2
 jobs:
   build:
     docker:
@@ -41,5 +39,4 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
-      - run: gradle testCoverage
-      - coveralls/upload
+      - run: gradle testCoverage coveralls

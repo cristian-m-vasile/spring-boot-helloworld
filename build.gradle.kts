@@ -5,7 +5,8 @@ plugins {
     id("io.spring.dependency-management") version "1.0.7.RELEASE"
     kotlin("jvm") version "1.3.31"
     kotlin("plugin.spring") version "1.3.31"
-    jacoco
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.8.4'
 }
 
 group = "com.example"
@@ -42,11 +43,15 @@ dependencies {
 
 tasks.jacocoTestReport {
     reports {
-        xml.isEnabled = false
-        csv.isEnabled = false
+        xml.isEnabled = true
+        csv.isEnabled = true
         html.isEnabled = true
         html.destination = file("$buildDir/reports/coverage")
     }
+}
+
+coveralls {
+    sourceDirs += ['src/main/kotlin']
 }
 
 tasks.jacocoTestCoverageVerification {

@@ -40,7 +40,7 @@ jobs:
 
       # run tests!
       - run: 
-        name: Run tests
-        command: gradle testCoverage coveralls
-        environment:
-          COVERALLS_REPO_TOKEN: af0DbXygiK0maRILL4scVTB0WyEzhh25z
+          name: Run tests
+          command: gradle testCoverage coveralls
+          environment:
+            COVERALLS_REPO_TOKEN: af0DbXygiK0maRILL4scVTB0WyEzhh25z

@@ -5,8 +5,8 @@ plugins {
     id("io.spring.dependency-management") version "1.0.7.RELEASE"
     kotlin("jvm") version "1.3.31"
     kotlin("plugin.spring") version "1.3.31"
-    id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.8.4'
+    jacoco
+    id("com.github.kt3k.coveralls") version "2.8.4"
 }
 
 group = "com.example"
@@ -51,7 +51,7 @@ tasks.jacocoTestReport {
 }
 
 coveralls {
-    sourceDirs += ['src/main/kotlin']
+    sourceDirs = sourceDirs + "src/main/kotlin"
 }
 
 tasks.jacocoTestCoverageVerification {

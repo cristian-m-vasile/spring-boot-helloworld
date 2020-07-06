@@ -1,5 +1,7 @@
 # helloworld
 
+[![Coverage Status](https://coveralls.io/repos/github/cristian-m-vasile/spring-boot-helloworld/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/cristian-m-vasile/spring-boot-helloworld?branch=feature/coveralls)   
+
 An example app to capture my learnings on spring boot, Kotlin, Gradle etc.
 
 ## Setup
